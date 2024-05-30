@@ -1,0 +1,73 @@
+<script>
+
+
+export default {
+    name: 'FooterApp',
+    data() {
+        return {
+
+
+        }
+    },
+    methods: {
+    },
+    mounted() {
+
+    }
+}
+</script>
+
+<template>
+
+
+    <footer id="site_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>My Portofolio</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores dolorum dignissimos
+                        pariatur.
+                        Quibusdam, similique ut voluptates sit quae enim hic ea delectus magni, eius tenetur neque
+                        doloremque omnis
+                        nam.
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>Quick Link</h3>
+                    <ul class="unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contacts">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Social</h3>
+                    <ul class="social unstyled">
+                        <li>
+                            <a href="https://github.com/chrialge">
+                                <i class="fa-brands fa-square-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /#site_footer -->
+
+
+</template>
+
+<style></style>
