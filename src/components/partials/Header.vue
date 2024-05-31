@@ -5,7 +5,24 @@ export default {
     name: 'HeaderApp',
     data() {
         return {
-
+            nav: [
+                {
+                    'text': 'Home',
+                    'route': 'home'
+                },
+                {
+                    'text': 'Blog',
+                    'route': 'blog'
+                },
+                {
+                    'text': 'About',
+                    'route': 'about'
+                },
+                {
+                    'text': 'Contacts',
+                    'route': 'contacts'
+                },
+            ]
 
         }
     },
@@ -29,11 +46,7 @@ export default {
             </div>
 
             <div class="right">
-                <a href="/">Home</a>
-                <a href="/blog">Blog</a>
-                <a href="/about">About</a>
-                <a href="/contacts">Contacts</a>
-
+                <router-link v-for="item in nav" :to="{ name: item.route }" class="pointer">{{ item.text }}</router-link>
             </div>
         </div>
 

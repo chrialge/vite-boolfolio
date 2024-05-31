@@ -5,7 +5,24 @@ export default {
     name: 'FooterApp',
     data() {
         return {
-
+            nav: [
+                {
+                    'text': 'Home',
+                    'route': 'home'
+                },
+                {
+                    'text': 'Blog',
+                    'route': 'blog'
+                },
+                {
+                    'text': 'About',
+                    'route': 'about'
+                },
+                {
+                    'text': 'Contacts',
+                    'route': 'contacts'
+                },
+            ]
 
         }
     },
@@ -36,10 +53,9 @@ export default {
                 <div class="col">
                     <h3>Quick Link</h3>
                     <ul class="unstyled">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/contacts">Contacts</a></li>
+                        <li v-for="item in nav">
+                            <router-link :to="{ name: item.route }">{{ item.text }}</router-link>
+                        </li>
                     </ul>
                 </div>
                 <div class="col">

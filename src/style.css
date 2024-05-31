@@ -16,6 +16,10 @@ body {
   color: white !important;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* region layout */
 
 .container {
@@ -51,7 +55,7 @@ body {
 
 /* Region Main */
 #site_main {
-
+  min-height: 80vh;
 
 
 
