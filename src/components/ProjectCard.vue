@@ -11,7 +11,7 @@ export default {
     },
     props: {
         project: Object,
-        key: Number,
+
     },
 }
 </script>

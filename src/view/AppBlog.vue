@@ -53,14 +53,14 @@ export default {
 
 <template>
 
-    <Jumbotron />
+    <Jumbotron btnName="Contact" btnRoute="contacts" />
 
     <section id="card_projects">
         <div class="container">
 
             <div class="row">
 
-                <ProjectCardApp v-for="project in projects.data" :project="project" :key="project.id" />
+                <ProjectCardApp v-for="project in projects.data" :project="project" />
 
             </div>
             <div class="pagination">

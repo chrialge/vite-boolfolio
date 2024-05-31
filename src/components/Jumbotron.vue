@@ -5,6 +5,11 @@ export default {
         return {
 
         }
+
+    },
+    props: {
+        'btnName': String,
+        'btnRoute': String,
     }
 }
 </script>
@@ -22,7 +27,7 @@ export default {
                 nisi
                 iure molestias? Dicta repellendus nobis minus fugiat ab accusamus pariatur.
             </p>
-            <button class="btn btn-primary">My project</button>
+            <router-link class="btn btn-primary" :to="{ name: btnRoute }">{{ btnName }}</router-link>
         </div>
     </section>
 </template>

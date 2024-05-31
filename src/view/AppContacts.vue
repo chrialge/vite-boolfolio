@@ -4,7 +4,9 @@ import Jumbotron from '../components/Jumbotron.vue'
 export default {
     name: 'AppContacts',
     data() {
-        return {}
+        return {
+
+        }
     },
     components: {
         Jumbotron
@@ -13,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <Jumbotron />
+    <Jumbotron btnName="My Home" btnRoute="home" />
     <div class="container py-10">
 
 
