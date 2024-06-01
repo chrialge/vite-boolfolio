@@ -5,14 +5,12 @@ export default {
     name: 'ProjectCardApp',
     data() {
         return {
-
-
         }
     },
     props: {
         project: Object,
-
     },
+
 }
 </script>
 

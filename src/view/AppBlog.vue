@@ -2,6 +2,8 @@
 import axios from 'axios'
 import ProjectCardApp from '../components/ProjectCard.vue'
 import Jumbotron from '../components/Jumbotron.vue'
+import Loading from '../components/Loading.vue'
+
 
 export default {
     name: 'AppBlog',
@@ -10,11 +12,14 @@ export default {
             projects: [],
             base_api_url: 'http://127.0.0.1:8000/',
             base_projects_url: 'api/projects',
+            loading: true,
+
         }
     },
     components: {
         ProjectCardApp,
         Jumbotron,
+        Loading
     },
     methods: {
         goTo(page) {
@@ -39,7 +44,8 @@ export default {
                 .get(url)
                 .then(response => {
                     console.log(response.data);
-                    this.projects = response.data.projects
+                    this.projects = response.data.projects;
+                    this.loading = false
                 })
         }
     },
@@ -63,6 +69,7 @@ export default {
                 <ProjectCardApp v-for="project in projects.data" :project="project" />
 
             </div>
+            <Loading v-show="loading" />
             <div class="pagination">
 
                 <nav aria-label="Page navigation">
