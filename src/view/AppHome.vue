@@ -3,15 +3,13 @@ import axios from 'axios'
 import Jumbotron from '../components/Jumbotron.vue'
 import ProjectCardApp from '../components/ProjectCard.vue'
 import Loading from '../components/Loading.vue'
+import { state } from '../state.js'
 
 export default {
     name: 'AppHome',
     data() {
         return {
-            projects: [],
-            base_api_url: 'http://127.0.0.1:8000/',
-            base_projects_latest_url: 'api/latest',
-            loading: true,
+            state,
         }
     },
     components: {
@@ -20,23 +18,16 @@ export default {
         Loading
     },
     methods: {
-        callApi(url) {
-            axios
-                .get(url)
-                .then(response => {
-                    // console.log(response.data);
-                    this.projects = response.data.projects
-                    console.log(this.loading)
-                    this.loading = false
-                    console.log(this.loading)
-                })
+        generateProjects() {
+            if (this.state.loading === false) {
+                this.state.loading = true
+            }
+            let url = this.state.base_api_url + this.state.base_projects_latest_url;
+            this.state.getProjectsLatest(url);
         }
     },
     mounted() {
-        let url = this.base_api_url + this.base_projects_latest_url;
-        // console.log(url);
-        this.callApi(url)
-        console.log(this.loading)
+        this.generateProjects();
     }
 }
 </script>
@@ -50,12 +41,12 @@ export default {
             <h1 class="text-black">Latest Project</h1>
             <div class="row">
 
-                <ProjectCardApp v-for="project in projects" :project="project" />
+                <ProjectCardApp v-for="project in this.state.projects_latest" :project="project" />
 
 
             </div>
 
-            <Loading v-show="loading" />
+            <Loading v-show="this.state.loading" />
         </div>
     </section>
 
