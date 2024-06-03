@@ -3,6 +3,7 @@ import axios from 'axios';
 import HeaderApp from './components/partials/Header.vue';
 import FooterApp from './components/partials/Footer.vue';
 
+
 //import { RouterView } from 'vue-router';
 
 export default {
