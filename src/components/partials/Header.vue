@@ -22,6 +22,7 @@ export default {
                     'text': 'Contacts',
                     'route': 'contacts'
                 },
+
             ]
 
         }
@@ -29,7 +30,6 @@ export default {
     methods: {
     },
     mounted() {
-
     }
 }
 </script>
@@ -46,7 +46,8 @@ export default {
             </div>
 
             <div class="right">
-                <router-link v-for="item in nav" :to="{ name: item.route }" class="pointer">{{ item.text }}</router-link>
+                <router-link v-for="item in nav" :to="{ name: item.route }" class="pointer">{{ item.text
+                    }}</router-link>
             </div>
         </div>
 

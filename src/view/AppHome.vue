@@ -41,7 +41,10 @@ export default {
             <h1 class="text-black">Latest Project</h1>
             <div class="row">
 
+
                 <ProjectCardApp v-for="project in this.state.projects_latest" :project="project" />
+
+
 
 
             </div>

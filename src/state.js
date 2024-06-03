@@ -13,7 +13,7 @@ export const state = reactive({
         axios
             .get(url)
             .then(response => {
-                // console.log(response.data);
+                console.log(response.data);
                 this.projects = response.data.projects;
                 console.log(this.projects);
                 this.loading = false;

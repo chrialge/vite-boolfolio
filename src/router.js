@@ -1,11 +1,12 @@
-import { createRouter, createMemoryHistory } from 'vue-router';
+import { createRouter, createWebHistory  } from 'vue-router';
 import AppHome from './view/AppHome.vue';
 import AppBlog from './view/AppBlog.vue';
 import AppAbout from './view/AppAbout.vue';
 import AppContacts from './view/AppContacts.vue';
+import SingleCard from './view/SingleCard.vue';
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes: [
         {
             path: '/',
@@ -26,7 +27,12 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: AppContacts
-        }
+        },
+        {
+            path: '/projects/:slug',
+            name: 'singleCard',
+            component: SingleCard
+        },
     ]
 
 })
