@@ -1,7 +1,8 @@
 <script>
-import axios from 'axios'
-import ProjectCardApp from '../components/ProjectCard.vue'
-import { state } from '../state.js'
+import axios from 'axios';
+import ProjectCardApp from '../components/ProjectCard.vue';
+import { state } from '../state.js';
+import { router } from '../router.js';
 
 export default {
     data() {
@@ -24,9 +25,16 @@ export default {
                 .get(url)
                 .then(response => {
                     console.log(response.data);
-                    this.project = response.data.response;
+                    if (response.data.success == true) {
+                        this.project = response.data.response;
 
-                    this.loading = false;
+                        this.loading = false;
+                    } else {
+                        this.$router.push({ name: 'not-found' })
+                    }
+
+
+                }).catch(error => {
 
                 })
             console.log(this.project)

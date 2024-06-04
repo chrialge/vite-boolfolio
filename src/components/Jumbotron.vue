@@ -16,18 +16,51 @@ export default {
 
 <template>
     <section id="jumbotron">
-        <div class="container text-black">
-            <h1>My portfolio</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam sapiente pariatur aut eveniet
-                porro
-                similique eligendi! Explicabo quam non, dolorem dolor eligendi impedit voluptas autem accusamus,
-                expedita
-                recusandae accusantium ducimus, adipisci praesentium quia optio aspernatur blanditiis doloribus officiis
-                nisi
-                iure molestias? Dicta repellendus nobis minus fugiat ab accusamus pariatur.
-            </p>
-            <router-link class="btn btn-primary" :to="{ name: btnRoute }">{{ btnName }}</router-link>
+        <div class="container_jumbotron text-black">
+            <div class="row">
+                <div class="col">
+                    <h1>
+                        < Christian Algieri <span class="text_light">/</span>>
+                    </h1>
+                    <p>
+                        Hi, my name is Christian Algieri. A passionate Junior full-stack Developer, i live in Italy.
+                    </p>
+                    <ul class="social unstyled flex gap-3">
+                        <li>
+                            <a href="https://github.com/chrialge">
+                                <i class="fa-brands fa-square-github text-4xl"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin text-4xl"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tech_stack">
+                        <h4>Tech-stack |</h4>
+                        <div class="icon-tech-stack">
+                            <img src="/public/images/html5-icon.png" alt="">
+                            <img src="/public/images/css3-icon.png" alt="">
+                            <img src="/public/images/bootstrap-icon.png" alt="">
+                            <img src="/public/images/js-icon.png" alt="">
+                            <img src="/public/images/vue-icon.png" alt="">
+                            <img src="/public/images/laravel-icon.png" alt="">
+                            <img src="/public/images/php-icon.png" alt="">
+                        </div>
+
+
+
+                    </div>
+
+                    <router-link class="btn btn-primary" :to="{ name: btnRoute }">{{ btnName }}</router-link>
+                </div>
+                <div class="col">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+
         </div>
     </section>
 </template>

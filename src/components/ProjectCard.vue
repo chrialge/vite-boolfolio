@@ -15,10 +15,10 @@ export default {
 
     mounted() {
         this.count = this.project.technologies.length - 1
-        this.gsap.to(".col_animation", {
-            duration: 3,
-            rotation: 360,
-        })
+        // this.gsap.to(".col_animation", {
+        //     duration: 3,
+        //     rotation: 360,
+        // })
     }
 
 }

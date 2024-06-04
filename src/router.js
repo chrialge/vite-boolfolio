@@ -1,9 +1,10 @@
-import { createRouter, createWebHistory  } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './view/AppHome.vue';
 import AppBlog from './view/AppBlog.vue';
 import AppAbout from './view/AppAbout.vue';
 import AppContacts from './view/AppContacts.vue';
 import SingleCard from './view/SingleCard.vue';
+import NotFound from './components/NotFound.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -32,6 +33,11 @@ const router = createRouter({
             path: '/projects/:slug',
             name: 'singleCard',
             component: SingleCard
+        },
+        {
+            path: '/:patchMatch(.*)*',
+            name: 'not-found',
+            component: NotFound
         },
     ]
 

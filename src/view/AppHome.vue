@@ -4,6 +4,7 @@ import Jumbotron from '../components/Jumbotron.vue'
 import ProjectCardApp from '../components/ProjectCard.vue'
 import Loading from '../components/Loading.vue'
 import { state } from '../state.js'
+import DisplayCardApp from '../components/DisplayCardApp.vue'
 
 export default {
     name: 'AppHome',
@@ -15,7 +16,8 @@ export default {
     components: {
         Jumbotron,
         ProjectCardApp,
-        Loading
+        Loading,
+        DisplayCardApp,
     },
     methods: {
         generateProjects() {
@@ -38,11 +40,16 @@ export default {
     <section id="card_projects">
 
         <div class="container">
-            <h1 class="text-black">Latest Project</h1>
-            <div class="row">
+            <div class="separeted flex items-center gap-3 justify-center py-20">
+                <hr>
+                <h1 class="text-black ">Latest Projects</h1>
+                <hr>
+            </div>
+
+            <div class="row py-10 gap-16">
 
 
-                <ProjectCardApp v-for="project in this.state.projects_latest" :project="project" />
+                <DisplayCardApp v-for="project in this.state.projects_latest" :project="project" />
 
 
 
