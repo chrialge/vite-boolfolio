@@ -11,6 +11,10 @@ export default {
                     'route': 'home'
                 },
                 {
+                    'text': 'Projects',
+                    'route': 'projects'
+                },
+                {
                     'text': 'Blog',
                     'route': 'blog'
                 },

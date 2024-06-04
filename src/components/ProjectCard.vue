@@ -40,16 +40,17 @@ export default {
                     </div>
 
                 </template>
-                <div class="card_body flex flex-col gap-2">
+                <div class="card_body flex flex-col gap-1">
                     <div class="card_title">
-                        <h3>{{ project.name }}</h3>
+                        <h2>{{ project.name }}</h2>
                     </div>
                     <div class="type">
-                        Types:
+                        <strong class="metadata">Types: </strong>
                         <span v-if="project.type">{{ project.type.name }}</span>
+                        <span v-else>N/A</span>
                     </div>
-                    <div class="types flex gap-2">
-                        Technologies:
+                    <div class="technologies flex gap-2">
+                        <strong class="metadata">Technologies:</strong>
                         <div class="badge_technologies" v-for="(technology, index) in project.technologies">
                             <span
                                 class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{{

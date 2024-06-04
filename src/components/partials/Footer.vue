@@ -41,14 +41,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3>My Portofolio</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores dolorum dignissimos
-                        pariatur.
-                        Quibusdam, similique ut voluptates sit quae enim hic ea delectus magni, eius tenetur neque
-                        doloremque omnis
-                        nam.
-                    </p>
+                    &copy; Christian Algieri 2024
                 </div>
                 <div class="col">
                     <h3>Quick Link</h3>

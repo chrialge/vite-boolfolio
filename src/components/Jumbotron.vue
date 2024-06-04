@@ -24,6 +24,7 @@ export default {
                     </h1>
                     <p>
                         Hi, my name is Christian Algieri. A passionate Junior full-stack Developer, i live in Italy.
+                        <span style="font-size: 30px;">👋</span>
                     </p>
                     <ul class="social unstyled flex gap-3">
                         <li>
