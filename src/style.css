@@ -58,6 +58,25 @@ body {
   background-color: var(--boolfolio-btn-hover) !important;
 }
 
+.btn {
+  padding: 0.5rem 0.95rem;
+  font-size: 18px;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--boolfolio-btn-hover) !important;
+    color: white;
+    box-shadow: 0 0 10px #e2711d;
+  }
+}
+
+.btn-primary {
+  background-color: rgb(225, 225, 225);
+  box-shadow: 0 0 10px rgb(225, 225, 225);
+}
+
 /* Region Loader */
 .loading_page {
   height: 600px;
@@ -423,24 +442,7 @@ body {
         }
       }
 
-      .btn {
-        padding: 0.5rem 0.95rem;
-        font-size: 18px;
-        border: 1px solid transparent;
-        border-radius: 0.5rem;
-        cursor: pointer;
 
-        &:hover {
-          background-color: var(--boolfolio-btn-hover);
-          color: white;
-          box-shadow: 0 0 10px #e2711d;
-        }
-      }
-
-      .btn-primary {
-        background-color: rgb(225, 225, 225);
-        box-shadow: 0 0 10px rgb(225, 225, 225);
-      }
 
 
 
