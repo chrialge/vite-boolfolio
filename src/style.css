@@ -77,6 +77,15 @@ body {
   box-shadow: 0 0 10px rgb(225, 225, 225);
 }
 
+.bg-input {
+  background-color: var(--boolfolio-text-dark);
+
+  &:focus {
+    border: 4px solid var(--boolfolio-btn-hover);
+    box-shadow: 0 0 4px var(--boolfolio-btn-hover);
+  }
+}
+
 /* Region Loader */
 .loading_page {
   height: 600px;
