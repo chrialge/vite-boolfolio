@@ -48,16 +48,16 @@ export default {
                     &copy; Christian Algieri 2024
                 </div>
                 <div class="col">
-                    <h3>Quick Link</h3>
-                    <ul class="unstyled">
+                    <h3 class="text-center">Quick Link</h3>
+                    <ul class="unstyled flex justify-center">
                         <li v-for="item in nav">
                             <router-link :to="{ name: item.route }">{{ item.text }}</router-link>
                         </li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h3>Social</h3>
-                    <ul class="social unstyled">
+                    <h3 class="text-center">Social</h3>
+                    <ul class="social unstyled flex justify-center">
                         <li>
                             <a href="https://github.com/chrialge">
                                 <i class="fa-brands fa-square-github"></i>

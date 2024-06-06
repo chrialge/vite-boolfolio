@@ -532,3 +532,96 @@ body {
 }
 
 /* endRegion DisplayCard */
+
+/* Region SingleCard */
+
+.container_single_card {
+
+  .title_project {
+    font-size: 35px;
+  }
+
+  .card-image>img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card_section {
+    background-color: var(--boolfolio-text-dark);
+    color: var(--boolfolio-btn-hover);
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 2rem;
+
+    .title {
+      color: var(--boolfolio-text-lighter);
+    }
+
+    .sub_title {
+      color: var(--boolfolio-btn-hover);
+    }
+
+    .value_info_project {
+      color: var(--boolfolio-text-lighter);
+    }
+
+    .badge_technology {
+      background-color: var(--boolfolio-btn-hover);
+      color: var(--boolfolio-text-lighter);
+    }
+
+    .btn_code_here {
+      display: flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+      background-color: var(--boolfolio-btn-hover);
+      color: var(--boolfolio-text-lighter);
+      border-radius: 10px;
+
+      &:hover {
+        background-color: var(--boolfolio-pagination-hover);
+      }
+    }
+  }
+
+
+  .notes {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card_note {
+
+    width: calc(100% / 12 * 4 - 10px);
+
+
+
+    @media (max-width: 1000px) {
+      width: calc(100% / 12 * 6 - 10px);
+    }
+
+    @media (max-width: 680px) {
+      width: 100%;
+    }
+
+  }
+
+  .single_card_bottom {
+
+    .card_video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      &>iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+
+
+  }
+
+
+
+}
