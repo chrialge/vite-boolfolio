@@ -2,7 +2,11 @@
 :root {
   --boolfolio-text-dark: hsl(247, 9%, 19%);
   --boolfolio-bg-primary: #3085fe;
+  --boolfolio-bg-light: rgb(219, 219, 219);
   --boolfolio-btn-hover: #ff9505;
+  --boolfolio-text-lighter: rgb(235, 230, 230);
+  --boolfolio-btn-lighter: var(--boolfolio-btn-lighter);
+  --boolfolio-pagination-hover: #cc5803;
 }
 
 
@@ -29,7 +33,7 @@ body {
 }
 
 .text_light {
-  color: rgb(235, 230, 230);
+  color: var(--boolfolio-text-lighter);
 }
 
 .title {
@@ -73,17 +77,24 @@ body {
 }
 
 .btn-primary {
-  background-color: rgb(225, 225, 225);
-  box-shadow: 0 0 10px rgb(225, 225, 225);
+  background-color: var(--boolfolio-btn-lighter);
+  box-shadow: 0 0 10px var(--boolfolio-btn-lighter);
 }
 
 .bg-input {
   background-color: var(--boolfolio-text-dark);
+  border: 4px solid var(--boolfolio-btn-hover);
+  box-shadow: 0 0 4px var(--boolfolio-btn-hover);
+
 
   &:focus {
     border: 4px solid var(--boolfolio-btn-hover);
     box-shadow: 0 0 4px var(--boolfolio-btn-hover);
   }
+
+
+
+
 }
 
 /* Region Loader */
@@ -94,7 +105,7 @@ body {
     width: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 8px solid #514b82;
+    border: 8px solid var(--boolfolio-text-dark);
     animation:
       l20-1 0.8s infinite linear alternate,
       l20-2 1.6s infinite linear;
@@ -175,11 +186,7 @@ body {
       @media (min-width: 990px) {
         width: calc(100% / 12 * 4);
       }
-
-
-
     }
-
   }
 }
 
@@ -208,7 +215,7 @@ body {
 
       &>* {
         text-decoration: none;
-        color: white;
+        color: var(--boolfolio-text-lighter);
         font-size: 20px;
         font-weight: 500;
         border-bottom: 3px solid transparent;
@@ -227,7 +234,7 @@ body {
 /* Region Main */
 #site_main {
   min-height: 80vh;
-  background-color: rgb(219, 219, 219);
+  background-color: var(--boolfolio-bg-light);
 
   .separeted {
 
@@ -293,7 +300,7 @@ body {
       .page-item {
         padding: 0.5rem;
         border: 1px solid rgb(196, 195, 195);
-        background-color: white;
+        background-color: var(--boolfolio-btn-lighter);
 
         .page-link {
           border: none;
@@ -301,13 +308,11 @@ body {
           cursor: pointer;
 
           &>i {
-            color: white;
+            color: var(--boolfolio-text-lighter);
           }
         }
 
-        .page:hover {
-          background-color: black;
-        }
+
 
         &:hover {
           cursor: pointer
@@ -316,15 +321,15 @@ body {
       }
 
       .page-item:hover {
-        background-color: #cc5803 !important;
-        color: white;
+        background-color: var(--boolfolio-pagination-hover) !important;
+        color: var(--boolfolio-text-lighter);
 
 
 
       }
 
       .page-item:hover .btn_page {
-        background-color: #cc5803 !important;
+        background-color: var(--boolfolio-pagination-hover) !important;
       }
     }
   }
@@ -342,6 +347,7 @@ body {
   .container {
 
     .row {
+      align-items: center;
 
       .col {
 

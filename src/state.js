@@ -4,8 +4,9 @@ import axios from 'axios'
 export const state = reactive({
     projects: [],
     projects_latest: [],
-    base_projects_latest_url: 'api/latest',
     base_api_url: 'http://127.0.0.1:8000/',
+    base_projects_latest_url: 'api/latest',
+
     base_projects_url: 'api/projects',
     loading: true,
     getProjects(url) {

@@ -1,19 +1,18 @@
+<script>
+export default {
+    name: 'AppBlog',
+    data() {
+        return {
+
+        }
+    }
+}
+</script>
+
 <template>
     <div>
 
     </div>
 </template>
 
-<script>
-export default {
-    setup () {
-        
-
-        return {}
-    }
-}
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
