@@ -33,7 +33,7 @@ export default {
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/christian-algieri-218b42312">
                                 <i class="fa-brands fa-linkedin text-4xl"></i>
                             </a>
                         </li>

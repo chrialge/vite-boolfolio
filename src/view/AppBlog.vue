@@ -32,11 +32,11 @@ export default {
     <div class="container py-10">
         <div class="card_blog_projects" v-for="project in state.projects_all">
             <h1 class="title title_project py-4">Projects #{{ project.id }}: {{ project.name }}</h1>
-            <div class=" container_blog flex flex-row gap-3">
+            <div class=" container_blog flex gap-3">
 
                 <template v-if="project.cover_image.startsWith('uploads')">
-                    <div class="card-image grow">
-                        <img :src="base_api_url + '/storage/' + project.cover_image" alt="">
+                    <div class="card-image">
+                        <img :src="state.base_api_url + 'storage/' + project.cover_image" alt="">
                     </div>
                 </template>
                 <template v-else>
@@ -44,18 +44,10 @@ export default {
                         <img :src="project.cover_image" :alt="'Image of the project: ' + project.name">
                     </div>
                 </template>
-                <div class="card_description">
+                <div class="card_description grow">
                     <h4 class="title">Description👇👇</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ab vel fugit iusto amet illum
-                        aliquam corporis
-                        perspiciatis, eligendi fuga nostrum! Voluptas numquam soluta eos iure nam est blanditiis
-                        voluptates nesciunt
-                        error, officia rerum debitis placeat cupiditate? Ratione ex dolorem facere voluptatibus omnis
-                        impedit
-                        exercitationem dolorum similique voluptate, perspiciatis id illo earum natus, sapiente veniam
-                        explicabo in hic
-                        iure excepturi!
+                        {{ project.description }}
                     </p>
                 </div>
 

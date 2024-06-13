@@ -40,7 +40,7 @@ export const state = reactive({
             .then(response => {
                 // console.log(response.data);
                 this.projects_latest = response.data.projects;
-                console.log(this.projects);
+                console.log(this.projects_latest);
                 this.loading = false;
             })
     }

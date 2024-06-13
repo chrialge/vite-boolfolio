@@ -636,7 +636,10 @@ body {
   }
 
   .container_blog {
-    flex-wrap: wrap;
+
+    @media (max-width: 819px) {
+      flex-wrap: wrap;
+    }
   }
 
   .card_description {

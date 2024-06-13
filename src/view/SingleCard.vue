@@ -58,7 +58,7 @@ export default {
                 <div class="flex-col grow">
                     <template v-if="project.cover_image.startsWith('uploads')">
                         <div class="card-image">
-                            <img :src="base_api_url + '/storage/' + project.cover_image" alt="">
+                            <img :src="state.base_api_url + 'storage/' + project.cover_image" alt="">
                         </div>
                     </template>
                     <template v-else>
@@ -73,14 +73,15 @@ export default {
                         <div class="metadata flex flex-col gap-2">
                             <div class="types">
                                 <span class="sub_title">Types: </span>
-                                <span v-if="project.type" class="value_info_project">{{ project.type }}</span>
+                                <span v-if="project.type" class="value_info_project">{{ project.type.name }}</span>
                                 <span v-else class="value_info_project">N/A</span>
                             </div>
 
 
                             <div class="technologies flex gap-2 ">
                                 <span class="sub_title">Technology:</span>
-                                <div class="badge_technologies" v-for="(technology, index) in project.technologies">
+                                <div class="badge_technologies flex  gap-2"
+                                    v-for="(technology, index) in project.technologies">
                                     <span
                                         class=" badge_technology inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">{{
                                             technology.name }}</span>
@@ -102,7 +103,7 @@ export default {
                                 </span>
                                 <span v-if="project.finish_date && project.status === 0" class="value_info_project">{{
                                     project.finish_date
-                                    }}</span>
+                                }}</span>
                                 <span v-else class="value_info_project">N/A</span>
                             </div>
                             <div class="status">
@@ -114,13 +115,13 @@ export default {
 
                             </div>
                             <div class="github flex items-center gap-2 pb-2">
-                                <a href="https://github.com/chrialge" class="btn_code_here">
+                                <a :href="project.url" class="btn_code_here">
                                     <span> Code Here:</span>
                                     <i class="fa-brands fa-github text-xl pl-2"></i>
                                 </a>
                             </div>
                             <div class="github flex items-center gap-2">
-                                <a href="https://github.com/chrialge" class="btn_code_here">
+                                <a :href="project.demo_project" class="btn_code_here">
                                     <span> Demo Here:</span>
                                     <i class="fa-solid fa-laptop-code text-xl pl-2"></i>
                                 </a>
@@ -138,9 +139,9 @@ export default {
                     {{ project.description }}
                 </p>
             </div>
-            <div class="container_video">
+            <div class="container_video" v-if="project.video">
                 <div class="video py-6">
-                    <h3 class="title">Videos:</h3>
+                    <h3 class="title">Video:</h3>
                     <div class="single_card_bottom">
                         <template v-if="project.video">
                             <div class="card_video">
@@ -153,7 +154,7 @@ export default {
                     </div>
 
                 </div>
-                <div class="notes flex gap-3">
+                <div class="notes flex gap-3" v-if="project.note_id">
                     <div class="card_note card_section ">
                         <div class="note_title pb-4">
                             <h3 class="title title_card inline-block pe-2">Notes:</h3>
